@@ -1,0 +1,158 @@
+  /* index.css */
+
+ 
+
+  .banner-text {
+    font-size:4rem !important;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .home_right{
+    position: relative;
+  }
+  .home_right .home_review{
+
+      position: absolute;
+      top:30%;
+       left:-20% !important;
+  }
+
+  .home_review2{
+    position: absolute;
+    top:65%;
+    left:-6%;
+  }
+
+
+  .business_features{
+    background-color: #F7F7FC !important;
+    border: 1px solid #EAEAEA !important; 
+    
+  }
+
+  .business_features_left{
+    border-right: 1px solid #EAEAEA;
+    height: 350px;
+    display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  .business_features h2{
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .business_features span{
+    font-weight: 500;
+    color: #828282;
+  }
+
+  .business_btn {
+     list-style: none !important;
+    font-size: 16px !important;
+    font-weight: 400;
+    color: #454545 !important;
+
+  }
+
+  .right_content{
+    color: black !important;
+  }
+
+ 
+
+  .banner-descrp {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .rfm-marquee{
+   min-width: 0% !important;
+  }
+
+ 
+
+
+ 
+
+  .banner-descrp {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  .search-bar {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 120px;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+
+  .search-bar input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+  }
+
+
+
+  .outer-image-wrapper {
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .outer-image {
+    width: 100%;
+  }
+
+  .inner-image-wrapper {
+    width: 50%;
+    position: relative;
+  }
+
+  .inner-image-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .inner-image {
+    width: 200%;
+    margin-left: -50%;
+  }
+
+  .descrp {
+    font-family: Figtree;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.01px;
+    text-align: center;
+    color: #00000080;
+
+  }
+
+
+  @media screen and (max-width:767px) {
+
+    
+    .banner-text {
+      font-size:3rem !important;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+  }
+
+
+ 

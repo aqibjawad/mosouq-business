@@ -1,0 +1,32 @@
+.business-demo-btn {
+  margin-top: 2rem;
+  border-radius: 40px;
+  color: white;
+  width: 100%;
+  height: 64px;
+  background-color: #404eed;
+  border: none;
+}
+
+
+.terms{
+  font-size: 18px;
+}
+
+
+.demo-right-div{
+  background-color: #FAFAFA;
+}
+
+@media (max-width: 725px) {
+  
+  .business-demo-btn {
+    width: 100%;
+  }
+
+
+  .demo-right-div {
+    margin-right: 3rem !important; /* Use !important to override other styles */
+  }
+}
+

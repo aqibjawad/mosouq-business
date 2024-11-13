@@ -1,0 +1,132 @@
+#signin{
+    margin-top: 10rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 600px; /* Adjust the max-width as needed */
+    width: 100%;
+  }
+  
+  
+  .signin-right {
+    margin-top: 10rem;
+    padding: 2rem;
+    background-color: #FAFAFA;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-button google{
+    background-color: white;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  
+  .signin-left h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: -10rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .signin-left p {
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+   
+  .signin-left .illustration {
+    width: 100%;
+    height: 490px;
+  }
+  
+  
+  @media (max-width: 425px) {
+
+    #signin{
+        margin-right: 4rem;
+      }
+
+    .signin-left .illustration {
+      width: 20px; 
+    }
+  }
+  
+  .signin-right h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .signin-right p {
+    margin-bottom: 1rem;
+  }
+  
+  .social-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .google {
+    background-color: #4285F4;
+    color: white;
+  }
+  
+  .apple {
+    background-color: #333;
+    color: white;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .terms input {
+    margin-right: 0.5rem;
+  }
+  
+  .signin-button {
+    padding: 0.75rem;
+    background-color: #404EED;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  
+  .business-link {
+    margin-top: 1rem;
+  }
+  
+  .business-link a {
+    text-decoration: none;
+  }
+  
+  

@@ -1,0 +1,122 @@
+.business-signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .business-signup-right {
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .business-signup-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 3rem;
+    height: 100%;
+  }
+  
+  .business-signup-left h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .business-signup-left p {
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+  .business-signup-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .business-signup-right h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .business-signup-right p {
+    margin-bottom: 1rem;
+  }
+  
+  .business-social-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .google {
+    background-color: #4285F4;
+    color: white;
+  }
+  
+  .apple {
+    background-color: #333;
+    color: white;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  form select{
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .terms input {
+    margin-right: 0.5rem;
+  }
+  
+  .business-signup-button {
+    padding: 0.75rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .business-link {
+    margin-top: 1rem;
+  }
+  
+  .business-link a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+
+    .signin-logo{
+      width: 50%;
+    }
+
+    .form-div{
+      margin-right: 20rem;
+    }
+}

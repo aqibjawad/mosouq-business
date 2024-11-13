@@ -1,0 +1,164 @@
+/* Default styles for larger screens */
+.pricing-plans {
+    text-align: justify;
+    font-family: 'Arial', sans-serif;
+}
+
+.header-image {
+    width: 72px;
+    height: 72px;
+    margin-left: -5rem;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+.price-frequency {
+    display: flex;
+    align-items: baseline; /* Aligns the items by their baseline */
+}
+
+.price-frequency h1 {
+    margin-right: 8px; /* Adjust the space between price and frequency */
+}
+
+.plan {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width:'100%';
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan h3 {
+    color: #6c757d;
+}
+
+.plan h2 {
+    color: #343a40;
+    margin-top: 10px;
+}
+
+.plan p {
+    color: #000;
+    margin: 10px 0;
+    font-weight: 400px;
+    font-size: 18px;
+}
+
+.plan h1 {  
+    color: #343a40;
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan ul li {
+    margin: 10px 0;
+    display: flex;
+     color: black !important;
+    align-items: center;
+}
+
+.plan ul li::before {
+    content:url('../../../public/Check\ Circle\ blue.png');
+    color: #404EED;
+    margin-right: 10px;
+}
+
+.plan.selected ul li::before{
+    content:url('../../../public/Check\ Circle.png');
+    color: #404EED;
+    margin-right: 10px;
+}
+
+.plan.plan.selected ul li{
+    color: white !important;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 96px;
+}
+
+.plan button {
+    background: #404EED;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 96px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    width: 308px;
+    height: 72px;
+}
+
+/* Remove static blue color from popular plan */
+.plan.popular {
+    background: #f8f9fa;
+    color: #343a40;
+}
+
+/* Styles for selected plan */
+.plan.selected {
+    background: #404EED;
+    color: white !important;
+}
+
+.plan.selected button {
+    background: white;
+    color: #404EED;
+}
+
+.plan.selected ul li::before {
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px; /* Adjust the gap as needed */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Adjust the gap as needed */
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Adjust the gap as needed */
+    }
+
+    .plan {
+        width: 100%; /* Full width for small mobile view */
+    }
+}

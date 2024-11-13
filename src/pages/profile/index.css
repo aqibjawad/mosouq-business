@@ -1,0 +1,22 @@
+.business-profile-head .view-all-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #656565;
+  background-color: #FAFAFA;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  width: 175px;
+  height: 49px;
+  border: 1px solid #0000004D;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .business-profile-head .view-all-button {
+      margin-bottom: 0; 
+  }
+}
