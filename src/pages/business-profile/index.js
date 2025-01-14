@@ -7,15 +7,20 @@ import InfoProfile from "./inforProfile";
 
 const BusinessProfileSetup = () => {
   return (
-    <div style={{overflow:'hidden'}}>
+    <div style={{ overflow: "hidden" }}>
       <Row>
-        <Col lg={5} md={8} sm={12} style={{ maxHeight:"100vh", overflowY:"scroll" }}>
+        <Col
+          lg={12}
+          md={12}
+          sm={12}
+          // style={{ maxHeight:"100vh", overflowY:"scroll" }}
+        >
           <ProfileForm />
         </Col>
 
-        <Col lg={7} md={8} sm={12}>
+        {/* <Col lg={7} md={8} sm={12}>
           <InfoProfile />
-        </Col>
+        </Col> */}
       </Row>
     </div>
   );

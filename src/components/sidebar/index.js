@@ -36,7 +36,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="sidebar col-2">
+    <div className="sidebar col-2" style={{textDecoration:"none"}}>
       <div className="sidebar-top-sec">
         <div className="business-Profile-name">{profileData?.businessName}</div>
         <div className="business-border"></div>
@@ -44,7 +44,7 @@ const SideBar = () => {
       <div className="">
         <ul
           className="list-unstyled user-menubar"
-          style={{ paddingLeft: "1.5rem", paddingTop: "2rem" }}
+          style={{ paddingLeft: "1.5rem", paddingTop: "2rem", textDecoration:"none" }}
         >
           <li>
             <Link to="/business-home-dashboard" className="menu-item">
@@ -56,7 +56,7 @@ const SideBar = () => {
                     marginLeft: "-1rem",
                   }}
                 />
-                <p style={{ fontSize: "18px" }}> Home </p>
+                <p style={{ fontSize: "18px"}}> Home </p>
               </span>
             </Link>
           </li>

@@ -1,6 +1,6 @@
 .review_btn{
     background-color: transparent !important;
-    color: white;
+    /* color: white; */
     outline: none;
     border: 1px solid white;
     border-radius: 5px ;

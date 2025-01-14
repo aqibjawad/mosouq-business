@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./auth.business.css";
-import { Row, Col, Form } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { POST } from "../../apicontrollers/apiController";
-import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
-
+import { Eye, EyeOff, Loader } from "lucide-react";
 import "./signin.css";
 
 const BusinessPassword = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const token = searchParams.get("token");
-  
+  const navigation = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     if (token) {
@@ -22,23 +22,12 @@ const BusinessPassword = () => {
   }, [token]);
 
   const data = jwtDecode(token);
-
-  console.log(data);
-  
-
-  const navigation = useNavigate();
-
-  const email = data._id.split(':')[1]; 
+  const email = data._id.split(":")[1];
 
   const [formData, setFormData] = useState({
     email: email,
     password: "",
-  })
-  
-  // const [formData, setFormData] = useState({
-  //   email: data._id.email,
-  //   password: "",
-  // });
+  });
 
   const [requirements, setRequirements] = useState({
     length: false,
@@ -69,11 +58,14 @@ const BusinessPassword = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       const response = await POST("business/addPassword-business", formData);
       navigation("/business-profile");
     } catch (error) {
       console.error("Error:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -97,16 +89,30 @@ const BusinessPassword = () => {
             <label htmlFor="password" style={labelStyle}>
               Password
             </label>
-            <input
-              id="password"
-              style={{ width: "100%" }}
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formData.password}
-              onChange={handleChange}
-              className="mt-3"
-            />
+            <div className="relative w-full">
+              <input
+                id="password"
+                style={{ width: "100%" }}
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                className="mt-3"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-transparent border-none cursor-pointer"
+                style={{ marginTop: "6px" }}
+              >
+                {showPassword ? (
+                  <EyeOff size={20} color="#666666" />
+                ) : (
+                  <Eye size={20} color="#666666" />
+                )}
+              </button>
+            </div>
           </Col>
         </Row>
 
@@ -130,10 +136,10 @@ const BusinessPassword = () => {
         </ul>
 
         <button
-          onClick={handleSubmit}
           type="submit"
-          className="signin-button mt-3"
+          className="signin-button mt-3 flex items-center justify-center gap-2"
           disabled={
+            isLoading ||
             !(
               requirements.length &&
               requirements.lowercase &&
@@ -142,7 +148,14 @@ const BusinessPassword = () => {
             )
           }
         >
-          Complete Setup
+          {isLoading ? (
+            <>
+              <Loader className="animate-spin" size={20} />
+              Loading...
+            </>
+          ) : (
+            "Complete Setup"
+          )}
         </button>
       </form>
     </div>
