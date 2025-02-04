@@ -273,7 +273,7 @@ const ProfileForm = () => {
             text: "Your profile has been successfully submitted!",
           });
 
-          navigation("/business-home");
+          navigation("/profile");
         } else {
           throw new Error("Failed to update business images");
         }

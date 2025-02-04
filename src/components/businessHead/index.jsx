@@ -117,7 +117,7 @@ const FacebookStyleHeader = ({ businessData }) => {
                   Whatsapp
                 </Button>
               </div>
-              {/* <div className="col-6 col-md-2">
+              <div className="col-6 col-md-2">
                 <Button
                   variant="outline-primary"
                   className="d-flex align-items-center justify-content-center w-100"
@@ -131,7 +131,7 @@ const FacebookStyleHeader = ({ businessData }) => {
                   <MdEmail className="me-2" />
                   Website
                 </Button>
-              </div> */}
+              </div>
             </div>
           </Col>
         </Row>

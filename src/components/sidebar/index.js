@@ -38,7 +38,7 @@ const SideBar = () => {
   return (
     <div className="sidebar col-2" style={{textDecoration:"none"}}>
       <div className="sidebar-top-sec">
-        <div className="business-Profile-name">{profileData?.businessName}</div>
+        <div className="business-Profile-name"> Dashboard </div>
         <div className="business-border"></div>
       </div>
       <div className="">
@@ -47,7 +47,7 @@ const SideBar = () => {
           style={{ paddingLeft: "1.5rem", paddingTop: "2rem", textDecoration:"none" }}
         >
           <li>
-            <Link to="/business-home-dashboard" className="menu-item">
+            <Link to="/business-Home" className="menu-item">
               <span className="d-flex">
                 <AiFillDashboard
                   style={{
@@ -72,21 +72,6 @@ const SideBar = () => {
                   }}
                 />
                 <p style={{ fontSize: "18px" }}> Manage Reviews </p>
-              </span>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/share_promote" className="menu-item">
-              <span className="d-flex">
-                <AiFillDashboard
-                  style={{
-                    color: "white",
-                    fontSize: "20px",
-                    marginLeft: "-1rem",
-                  }}
-                />
-                <p style={{ fontSize: "18px" }}> Get Reviews </p>
               </span>
             </Link>
           </li>
@@ -169,15 +154,17 @@ const SideBar = () => {
           <li>
             <div
               style={{
-                color: "white",
+                color: "black",
                 textAlign: "center",
                 marginTop: "2rem",
                 marginBottom: "2rem",
+                textDecoration:"none",
+                marginLeft:"-3rem"
               }}
             >
               Your Plan: Free
             </div>
-            <Link to="/pricing">
+            <Link to="/pricing" style={{textDecoration:"none"}}>
               <div className="upgrade-button">Upgrade Now</div>
             </Link>
           </li>

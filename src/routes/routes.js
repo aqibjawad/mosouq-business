@@ -34,11 +34,9 @@ import ListingBasic from "../pages/businessListing"
 import BusinessHome from "../pages/businessProfile/home.business";
 import PropertyDetails from "../pages/businessDetails";
 
-import Dashboard from "../pages/business_profile/businessHome";
 
-import BusinessReviews from "../pages/business_profile/businessReviews"
+import BusinessReviews from "../pages/businessDetails/businessReviews"
 
-import ShareAndPromote from "../pages/business_profile/businessPromote";
 
 import Settings from "../pages/businessProfile/business.settings"
 
@@ -118,6 +116,13 @@ const routes = [
   },
 
   {
+    path: "/profile",
+    element: <BusinessProfile />,
+    exact: "true",
+    type: "private", 
+  },
+
+  {
     path: "/business-profile",
     element: <BusinessProfileSetup />,
     exact: "true",
@@ -132,22 +137,8 @@ const routes = [
   },
 
   {
-    path: "/business-Home-dashboard",
-    element: <Dashboard />,
-    exact: "true",
-    type: "business",
-  },
-
-  {
     path: "/business-Home-reviews",
     element: <BusinessReviews />,
-    exact: "true",
-    type: "business",
-  },
-
-  {
-    path: "/share_promote",
-    element: <ShareAndPromote />,
     exact: "true",
     type: "business",
   },
